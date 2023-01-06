@@ -11,6 +11,8 @@ pipenv install
 ```
 
 ## Getting Started
+Create .env file with your Github PAT and username
+
 Start the pipenv shell:
 ```
 pipenv shell
