@@ -1,4 +1,6 @@
 # Github Stats
+![image](https://user-images.githubusercontent.com/3636063/211070238-febf2aec-39e7-45ca-a9c7-f8538c861d01.png)
+
 This repository contains scripts to fetch data from the Github API and generate statistics about the data. Most of the code and the readme generated with ChatGPT 😁
 
 ## Dependencies
