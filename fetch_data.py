@@ -55,8 +55,6 @@ def get_commits(username: str, access_token: str, start_date, end_date, page):
     headers = {"Authorization": f"token {access_token}"}
     response = requests.get(url, headers=headers)
     data = response.json()
-    with open("data/test.json", "w") as f:
-        json.dump(data, f)
     return [item["commit"] for item in data["items"]]
 
 
