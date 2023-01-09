@@ -29,7 +29,6 @@ def store_contributions(username, access_token, start_date, end_date):
     response = requests.post(base_url, json=payload, headers=headers)
     if response.status_code == 200:
         data = response.json()
-        print(data)
         with open("data/contributions.json", "w") as f:
             json.dump(data, f)
     else:
@@ -58,7 +57,6 @@ def get_commits(username: str, access_token: str, start_date, end_date, page):
     data = response.json()
     with open("data/test.json", "w") as f:
         json.dump(data, f)
-    print(data["incomplete_results"])
     return [item["commit"] for item in data["items"]]
 
 
@@ -69,7 +67,7 @@ def main():
     year = 2022
     start_date = f"{year}-01-01T00:00:00Z"
     end_date = f"{year}-12-31T23:59:59Z"
-    # store_contributions(username, access_token, start_date, end_date)
+    store_contributions(username, access_token, start_date, end_date)
     store_commits(username, access_token, start_date, end_date)
 
 
